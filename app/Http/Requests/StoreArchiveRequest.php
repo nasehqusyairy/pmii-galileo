@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreTagRequest extends FormRequest
+class StoreArchiveRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -23,8 +23,9 @@ class StoreTagRequest extends FormRequest
     {
         return [
             'name' => ['required', 'string', 'max:255'],
-            'foreground' => ['nullable', 'string', 'max:255'],
-            'background' => ['nullable', 'string', 'max:255'],
+            'description' => ['nullable', 'string'],
+            'cover' => ['nullable', 'image', 'max:1024'],
+            'link' => ['required', 'url'],
         ];
     }
 }

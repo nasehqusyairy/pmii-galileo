@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Tag extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['name', 'foreground', 'background'];
+
+    public function events()
+    {
+        return $this->belongsToMany(Event::class);
+    }
 }

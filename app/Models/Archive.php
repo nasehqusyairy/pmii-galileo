@@ -5,7 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Folder extends Model
+class Archive extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['name', 'description', 'cover', 'form_link'];
 }

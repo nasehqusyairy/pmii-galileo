@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Folder;
-use App\Http\Requests\StoreFolderRequest;
-use App\Http\Requests\UpdateFolderRequest;
+use App\Models\Event;
+use App\Http\Requests\StoreEventRequest;
+use App\Http\Requests\UpdateEventRequest;
 
-class FolderController extends Controller
+class EventController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -27,7 +27,7 @@ class FolderController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreFolderRequest $request)
+    public function store(StoreEventRequest $request)
     {
         //
     }
@@ -35,7 +35,7 @@ class FolderController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Folder $folder)
+    public function show(Event $event)
     {
         //
     }
@@ -43,7 +43,7 @@ class FolderController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Folder $folder)
+    public function edit(Event $event)
     {
         //
     }
@@ -51,7 +51,7 @@ class FolderController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateFolderRequest $request, Folder $folder)
+    public function update(UpdateEventRequest $request, Event $event)
     {
         //
     }
@@ -59,7 +59,7 @@ class FolderController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Folder $folder)
+    public function destroy(Event $event)
     {
         //
     }

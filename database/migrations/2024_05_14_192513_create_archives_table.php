@@ -11,11 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tags', function (Blueprint $table) {
+        Schema::create('archives', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('foreground')->nullable();
-            $table->string('background')->nullable();
+            $table->string('description')->nullable();
+            $table->string('cover')->nullable();
+            $table->string('link')->nullable();
             $table->timestamps();
         });
     }
@@ -25,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('tags');
+        Schema::dropIfExists('archives');
     }
 };
